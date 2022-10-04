@@ -11,17 +11,19 @@ function changeTurn() {
     }
 }
 
+let fullBoard = 0;
 function draw(id) {
     document.getElementById(id).innerHTML = currentPlayer;
+    ++fullBoard;
     if (gameCheck(currentPlayer) == 0) {
         changeTurn();
     } else if (gameCheck(currentPlayer) == 1) {
         document.getElementById('turn').innerHTML = 'Player ' + currentPlayer + ' won!';
-        document.getElementById('turn').style = 'font-size: 50px; color: green;';
+        document.getElementById('turn').style = 'font-size: 30px; color: green;';
         document.getElementById('restart').style.visibility = 'visible';
     } else {
         document.getElementById('turn').innerHTML = 'The game ended, is a draw.';
-        document.getElementById('turn').style = 'font-size: 50px';
+        document.getElementById('turn').style = 'font-size: 30px';
         document.getElementById('restart').style.visibility = 'visible';
     }
 }
@@ -29,14 +31,10 @@ function draw(id) {
 function gameCheck(player) {
     let diagonal1 = 0;
     let diagonal2 = 0;
-    let fullBoard = 0;
     for (let i = 1; i <= 3; ++i) {
         let line = 0;
         let column = 0;
         for (let j = 1; j <= 3; ++j) {
-            if (document.getElementById(i * TEN + j).innerHTML != '') {
-                ++fullBoard;
-            }
             if (document.getElementById(i * TEN + j).innerHTML == player) {
                 ++line;
             }
