@@ -1,0 +1,25 @@
+#Title {
+    text-align: center;
+}
+
+#playerTurn {
+    text-align: center;
+}
+
+#gameBoard {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 440px;
+    height: 440px;
+    margin: 40px auto;
+}
+
+.cell {
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    line-height: 80px;
+    font-size: 80px;
+}
