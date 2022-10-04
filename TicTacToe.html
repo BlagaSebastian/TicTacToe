@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="TicTacToe.css">
+</head>
+<body>
+    <div id="Title">
+        <h1>TicTacToe</h1>
+    </div>
+    <div id="playerTurn">
+        <p id="turn">Now is player X turn.</p>
+        <button onClick = "window.location.reload();" id="restart" style="height: 50px; width: 60px; visibility: hidden;">Restart</button>
+    </div>
+    <div id='gameBoard'>
+        <button type="button" class="cell" id="11" onclick="draw(id)"></button>
+        <button type="button" class="cell" id="12" onclick="draw(id)"></button>
+        <button type="button" class="cell" id="13" onclick="draw(id)"></button>
+        <button type="button" class="cell" id="21" onclick="draw(id)"></button>
+        <button type="button" class="cell" id="22" onclick="draw(id)"></button>
+        <button type="button" class="cell" id="23" onclick="draw(id)"></button>
+        <button type="button" class="cell" id="31" onclick="draw(id)"></button>
+        <button type="button" class="cell" id="32" onclick="draw(id)"></button>
+        <button type="button" class="cell" id="33" onclick="draw(id)"></button>
+    </div>
+    <script src="TicTacToe.js"></script>
+</body>
+</html>
